@@ -3,10 +3,6 @@
 <html>
 <body onload="getLocation()">
 
-<p>Click the button to get your coordinates.</p>
-
-<button>Try It</button>
-
 <p id="demo"></p>
 
 <script>
@@ -23,12 +19,6 @@ function getLocation() {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-
 
 </script>
 
@@ -55,8 +45,8 @@ $latitude = $_COOKIE['latitude'];
 $longitude = $_COOKIE['longitude'];
 
 // use the latitude and longitude values in your PHP code
-echo "Latitude: " . $latitude . "<br>";
-echo "Longitude: " . $longitude . "<br>";
+//echo "Latitude: " . $latitude . "<br>";
+//echo "Longitude: " . $longitude . "<br>";
 
 $sql_distance = $having = ''; 
 if(!empty($distance_km) && !empty($latitude) && !empty($longitude)){ 
